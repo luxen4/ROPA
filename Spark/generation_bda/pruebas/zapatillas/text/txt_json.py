@@ -28,10 +28,15 @@ def read_text_file(filename):
                     zapatilla={"style":style, "marca":marca, "model":model, "years":years}
                     zapatillas.append(zapatilla)
                 
-                create_json_file("./zapatillas.json",zapatillas)
+                return zapatillas
             
     except FileNotFoundError:
         print(f"File '{filename}' not found.")
 
 file_name="./zapatillas2.txt"
-read_text_file(file_name)
+data = read_text_file(file_name)
+
+
+
+file_name="./result/json/zapatillas.json"
+create_json_file(file_name, data)

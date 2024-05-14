@@ -42,7 +42,13 @@ MONGO ###
 # use proyecto
 test> ----->    use proyecto
                 switched to db proyecto
+
 proyecto> db.zapatillas.find()
+proyecto> db.zapatillas.drop()
+
+use proyecto
+db.dropDatabase()
+exit
 
 
 

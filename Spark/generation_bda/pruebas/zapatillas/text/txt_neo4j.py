@@ -72,32 +72,4 @@ def read_text_file(filename):
 
 
 filename='./zapatillas2.txt'
-read_text_file(filename)   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-# Inserta desde un json en neo4j
-filename = "./../../../data_bda/json/relaciones.json"
-relaciones = read_json_fileRelaciones(filename)
-
-with neo4j_client._driver.session() as session:
-    for relacion in relaciones:
-        id_menu = relacion['id_menu']
-        id_restaurante = relacion['id_plato']
-        
-        relac = neo4j_client.create_relacion(session,  id_menu, id_restaurante)
-        
-        print(f"Relación creada -> id_menu: {relacion['id_menu']}, id_plato: {relacion['id_plato']}")
-neo4j_client.close()
-#___ 
+read_text_file(filename)
