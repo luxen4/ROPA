@@ -1,0 +1,9 @@
+Seiko:SRP730:Modern Seiko Turtles:4880
+Seiko:SRP735:***:1100
+Seiko:SRP777:***:1200
+Seiko:SRP779:Pepsi:1300
+Seiko:SRP787:Batman:1450
+Seiko:SRP789:Coke:1450.99
+Seiko:SRPA19:Zimbe Thailand LE of 1299:1300.98
+Seiko:SRPA21:PADI,SE:1200.30
+Seiko:SRPB01:Green, LE of 3500:1400.30
