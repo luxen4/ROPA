@@ -2,6 +2,50 @@
 # docker-compose up -d
 
 
+###############
+### MYSQL #####
+###############
+mysql -u root -p            alberite
+show databases;
+create database tienda_db;
+use tienda_db;
+drop table zapatillas;
+---> Hacer una base de datos en un puerto <----
+
+
+#################
+### Postgress ###
+#################
+    # psql -U postgres
+    # create database tienda_db;      
+    # \c tienda_db                   
+    # \l                                -> para ver las bases de datos
+    # \dt                               -> para ver las tablas
+    # DROP DATABASE tienda_db;
+    # \q o \quit
+    # DROP TABLE IF EXISTS zapatillas;
+
+Pendiente:
+psql -h localhost -p 9999 -U primOrd -d PrimOrd
+CREATE DATABASE PrimOrd;
+
+Puerto BBDD: 9999
+● Nombre BBDD: PrimOrd
+● Nombre usuario: primOrd
+● Password usuario: bdaPrimOrd
+
+
+#########
+MONGO ###
+#########
+# mongosh
+# use proyecto
+test> ----->    use proyecto
+                switched to db proyecto
+proyecto> db.zapatillas.find()
+
+
+
 pip3 install kafka-python==2.0.2
 
 
@@ -18,26 +62,10 @@ pip3 install kafka-python==2.0.2
 
 
 
-#################
-### Postgress ###
-#################
-    # psql -U postgres
-    # create database retail_db;      # create database warehouse_retail_db;        # create database primord_db;
-    # \c retail_db                    # \c warehouse_retail_db                      # \c primord_db
-    # \l                                -> para ver las bases de datos
-    # \dt                               -> para ver las tablas
-    # DROP DATABASE mi_base_de_datos;
-    # \q o \quit
-    # DROP TABLE IF EXISTS stores;
 
-Pendiente:
-psql -h localhost -p 9999 -U primOrd -d PrimOrd
-CREATE DATABASE PrimOrd;
 
-Puerto BBDD: 9999
-● Nombre BBDD: PrimOrd
-● Nombre usuario: primOrd
-● Password usuario: bdaPrimOrd
+
+
 
 
 
@@ -133,11 +161,6 @@ https://docs.localstack.cloud/user-guide/aws/s3/
 
 
 
-- Conectar mysql con spark.
-- Coger datos en Mongo y meterlos a un archivo.
-- Coger datos de Neu4j y meterlos a un archivo y los cargamos en Spark.  Leer ese archivo y meterlo en el cluster.
-
-
 
 result_df \
     .write \
@@ -180,14 +203,32 @@ git push                            # Realizar el push de los cambios a la rama 
 ### MONGO ###
 pip show pymongo
 pip install --upgrade pymongo
+// Consulta para encontrar todos los documentos en una colección
+db.nombre_de_la_coleccion.find()
+
+// Consulta para encontrar documentos que cumplan con ciertos criterios
+db.nombre_de_la_coleccion.find({ campo: valor })
+
+// Consulta para encontrar documentos y mostrar solo ciertos campos
+db.nombre_de_la_coleccion.find({}, { campo1: 1, campo2: 1 })
+
+// Consulta con condiciones más complejas
+db.nombre_de_la_coleccion.find({ $and: [{ campo1: valor1 }, { campo2: valor2 }] })
+
+// Consulta con condiciones combinadas
+db.nombre_de_la_coleccion.find({ campo1: valor1, campo2: { $gt: valor2 } })
+
+// Consulta con expresiones regulares
+db.nombre_de_la_coleccion.find({ campo: /expresion_regular/ })
+
+// Consulta con límite de resultados
+db.nombre_de_la_coleccion.find().limit(10)
+
+// Consulta con resultados ordenados
+db.nombre_de_la_coleccion.find().sort({ campo: 1 })  // 1 para orden ascendente, -1 para orden descendente
 
 
-### MYSQL ###
-mysql -u root -p       alberite
-show databases;
-create database retail_db;
-use retail_db;
-drop table clientes;
+
 
 
 
