@@ -337,3 +337,4 @@ git rm --cached 'Tema 4/Spark/cont_Neo4j/transactions/system/neostore.transactio
 
 # Meterlo al dockerfile
 pip3 install mysql-connector-python
+pip3 install neo4j
