@@ -25,7 +25,8 @@ def read_text_file(filename):
                         marca = line.split(',')[1]
                         model = line.split(',')[2]
                         years = line.split(',')[3]
-                    zapatilla={"style":style, "marca":marca, "model":model, "years":years}
+                        precio = line.split(',')[4]
+                    zapatilla={"style":style, "marca":marca, "model":model, "years":years, "precio":precio}
                     zapatillas.append(zapatilla)
                 
                 return zapatillas
@@ -33,10 +34,10 @@ def read_text_file(filename):
     except FileNotFoundError:
         print(f"File '{filename}' not found.")
 
-file_name="./zapatillas2.txt"
+file_name="./../zapatillas2.txt"
 data = read_text_file(file_name)
 
 
 
-file_name="./result/json/zapatillas.json"
+file_name="./../json/zapatillas.json"
 create_json_file(file_name, data)

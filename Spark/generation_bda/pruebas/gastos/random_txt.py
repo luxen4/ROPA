@@ -2,11 +2,7 @@
 import random
 import csv, random
 import datetime
-
-def create_text_file(filename, content):
-    with open(filename, 'w') as file:
-        file.write(content)
-    print(f"File '{filename}' created successfully!")
+import string
 
 
 # Función para generar un nombre aleatorio
@@ -39,11 +35,27 @@ def generar_Pagado():
     return random.choice(nombres)
 
 
+def generate_random_string1(length=5):
+    return ''.join(random.choices(string.ascii_lowercase, k=length))
+
+
+
+def generate_random_string(length=3):
+    letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    return ''.join(random.choice(letters) for _ in range(length))
+
+
+def create_text_file(filename, content):
+    with open(filename, 'w') as file:
+        file.write(content)
+    print(f"File '{filename}' created successfully!")
+
+
 gastos=''
 for _ in range(1000):
-    gasto = "" + str(generafecha()) + "*" + str(generar_id_hotel()) + "*" +  str(generar_Concepto()) + "*" + str(generar_Monto()) + "*" + str(generar_Pagado()) + "\n"
+    gasto = "" + str(generafecha()) + "*" + str(generate_random_string(5)) + "*" + str(generar_id_hotel()) + "*" +  str(generar_Concepto()) + "*" + str(generar_Monto()) + "*" + str(generar_Pagado()) + "\n"
     gastos=gastos+gasto
 
 
 # fecha,id_hotel,concepto,monto,pagado
-create_text_file("./Spark/data_bda/text/gastgastos.txt", gastos)
+create_text_file("./txt/gastgastos.txt", gastos)

@@ -28,7 +28,10 @@ def leerConSpark():
 
     try:
         #df = spark.read.text("s3a://my-local-bucket/dataPokemon.json")
-        df = spark.read.option("header", "true").csv("s3a://my-local-bucket/data_pokemon.csv/")
+        #df = spark.read.option("header", "true").csv("s3a://my-local-bucket/zapatillas_csv")
+        
+        df = spark.read.option("header", "true").json("s3a://my-local-bucket/zapatillas_json")
+        
         df.show()
         spark.stop()
     
