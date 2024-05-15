@@ -52,6 +52,13 @@ exit
 
 
 
+# mongosh --username root "mongodb://localhost:27017/proyecto"
+
+
+
+
+
+
 pip3 install kafka-python==2.0.2
 
 
@@ -62,13 +69,13 @@ pip3 install kafka-python==2.0.2
 # cd '.\Tema 4\'
 # cd .\Spark\
 # docker exec -it 6b10cb886acb3db1a2e16a6ef217580e415c31da9a25daece7d568d03ebc5d90 /bin/bash   # casa  
-# docker exec -it 296f24ddfe050cf2c3e6a4e59ce62af4e4c64ab3778606eb4e0f8c86ed036edc /bin/bash   # clase
+# docker exec -it 248356ae863cbb826b2e92d3f0ea62f25721141058ff7fba3f3dab55843981e1 /bin/bash   # clase
 # cd /opt/spark-apps     cd /opt/spark-data/sales
 # python prueba.py
 
 
 
-
+docker exec -it spark-localstack-1 /bin/bash # Otra manera de meterse!
 
 
 
@@ -104,7 +111,7 @@ Para el contenedor de spark
 ### Entrar al locastack ##
 
 # docker exec -it cb430cd4f9efbef8687f7aebe43e48e079d3b56863b50cfb330b934efc20927b /bin/bash    # casa
-# docker exec -it 296f24ddfe050cf2c3e6a4e59ce62af4e4c64ab3778606eb4e0f8c86ed036edc /bin/bash    # clase
+# docker exec -it 5779a2f081b0fffb4ec6177b212ffbd896dbea2b3e4dfb554f0841932fca505a /bin/bash    # clase
 
     # Crear un bucket por comando    ---> awslocal s3api create-bucket --bucket my-local-bucket
     # Listar los archivos del bucket ---> awslocal s3 ls s3://my-local-bucket
@@ -338,3 +345,21 @@ git rm --cached 'Tema 4/Spark/cont_Neo4j/transactions/system/neostore.transactio
 # Meterlo al dockerfile
 pip3 install mysql-connector-python
 pip3 install neo4j
+
+
+
+
+
+
+docker exec -it spark-master-1 /bin/bash no funciona
+
+##############################################################################################
+PS C:\Users\Vespertino\Downloads\ROPA> docker exec -it spark-localstack-1 /bin/bash
+root@02ab20f555fb:/opt/code/localstack# awslocal s3 ls s3://my-local-bucket
+                           PRE zapatillasNeo4j_json/
+root@02ab20f555fb:/opt/code/localstack# awslocal s3 ls s3://my-local-bucket
+                           PRE zapatillasNeo4j_json/
+root@02ab20f555fb:/opt/code/localstack# awslocal s3 ls s3://my-local-bucket
+                           PRE zapatillasNeo4j_json/
+root@02ab20f555fb:/opt/code/localstack# 
+##############################################################################################

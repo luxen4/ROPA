@@ -58,7 +58,7 @@ try:
             model = fila['z']['model']
             years = fila['z']['years']
             precio = fila['z']['precio']
-            print(precio)
+            print("Precio:" + str(precio))
             
             
             linea={'style':style,'marca':marca,'model':model,'years':years,'precio':precio}
@@ -66,13 +66,13 @@ try:
             data.append(linea)
 
         
-        df = spark.createDataFrame(data, ["style","marca","model","years","precio"])
+        df = spark.createDataFrame(data)
         
     
-        # csv
+        # json
         #df = spark.read.csv("./../../spark-data/csv/habitaciones.csv")
-        ruta_salida = "s3a://my-local-bucket/zapatillasNeo4j_csv"
-        df=df.write.csv(ruta_salida, mode="overwrite")
+        ruta_salida = "s3a://my-local-bucket/zapatillasNeo4j_json"
+        df=df.write.json(ruta_salida, mode="overwrite")
         
     
         

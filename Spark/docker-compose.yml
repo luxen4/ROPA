@@ -87,14 +87,32 @@ services:
 
 
 
+# OK  mongodb:
+#    image: mongo
+#    hostname: mongodb
+#    restart: always
+#    ports:
+#      - "27017:27017"
+#    volumes:
+#      - mongodb_data:/data/db
+
+
+# Esta tiene que funcionar
   mongodb:
     image: mongo
     hostname: mongodb
+    environment:
+       MONGO_INITDB_ROOT_USERNAME: root
+       MONGO_INITDB_ROOT_PASSWORD: bda
+       MONGO_INITDB_DATABASE: proyecto
+    
     restart: always
     ports:
       - "27017:27017"
     volumes:
       - mongodb_data:/data/db
+
+
 
   neo4j:
     image: neo4j:5.19

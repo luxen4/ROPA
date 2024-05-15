@@ -21,7 +21,11 @@ spark = SparkSession.builder \
 
 
 
-client = MongoClient()                  # Conexión al servidor de MongoDB (por defecto, se conectará a localhost en el puerto 27017)
+# client = MongoClient()                  # Conexión al servidor de MongoDB (por defecto, se conectará a localhost en el puerto 27017)
+#client = MongoClient('mongodb://root:bda@spark-mongodb-1:27017/')
+client = MongoClient('mongodb://root:bda@localhost:27017/proyecto')
+                     
+
 
 db = client["proyecto"]
 clients_collection = db["zapatillas"]      # Accede a la colección "clients"
@@ -52,6 +56,7 @@ for producto in resultados:
             marca= list['marca']
             model= list['model']
             years= list['years']
+            print(years)
         
             dic={'style':style, 'marca':marca,'model':model,'years':years}
 
@@ -64,8 +69,10 @@ for producto in resultados:
     # csv
     #df = spark.read.csv("./../../spark-data/csv/habitaciones.csv")
     ruta_salida = "s3a://my-local-bucket/zapatillasMongo_csv"
-    df=df.write.csv(ruta_salida, mode="overwrite")
+    df=df.write.csv(ruta_salida, mode="overwrite", header=True)
     
 
 
 # Falta de que haga una consulta'''
+
+

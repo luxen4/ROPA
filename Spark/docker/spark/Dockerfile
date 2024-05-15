@@ -18,6 +18,10 @@ RUN pip3 install psycopg2
 RUN pip3 install awscli-local
 
 
+RUN pip3 install neo4j
+RUN pip3 install mysql-connector-python
+
+
 
 # Fix the value of PYTHONHASHSEED
 # Note: this is needed when you use Python 3.3 or greater

@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 import json
 
-client = MongoClient()                  # Conexión al servidor de MongoDB (por defecto, se conectará a localhost en el puerto 27017)
-
+#client = MongoClient()                  # Conexión al servidor de MongoDB (por defecto, se conectará a localhost en el puerto 27017)
+client = MongoClient('mongodb://root:bda@spark-mongodb-1:27017/proyecto')
 db = client["proyecto"]
 clients_collection = db["zapatillas"]      # Accede a la colección "clients"
 
@@ -12,7 +12,7 @@ def read_json_file(filename):
     try:
         with open(filename, 'r') as file:
             data = json.load(file)
-            print(data)
+            #print(data)
             return data
     except FileNotFoundError:
         return None
@@ -50,7 +50,7 @@ def read_text_file(filename):
 filename="./zapatillas.json"
 data = read_json_file(filename)
 
-print(data)
+#print(data)
 
 clients_collection.insert_one({"zapatillas": data}) # Inserta la lista de clients
 print("Zapatillas insertados con exito.")
