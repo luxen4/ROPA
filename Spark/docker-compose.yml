@@ -59,29 +59,37 @@ services:
       - ./data_bda:/opt/spark-data
       - ./generation_bda:/opt/spark-generation
 
-  
-  database:
-    hostname: my_postgres_service
-    image: postgres:16.2-alpine
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_PASSWORD=casa1234
-    volumes:
-      - "postgres:/var/lib/postgresql/data"
-  
-
+  # OK
   #database:
   #  hostname: my_postgres_service
   #  image: postgres:16.2-alpine
   #  ports:
-  #    - "9999:5432"
+  #    - "5432:5432"
   #  environment:
-  #    - POSTGRES_PASSWORD=bdaPrimOrd
-  #    - POSTGRES_USER=primOrd
-  #    - POSTGRES_DB=PrimOrd
+  #    - POSTGRES_PASSWORD=casa1234
   #  volumes:
   #    - "postgres:/var/lib/postgresql/data"
+  
+
+  # Tiene que funcionar
+  database:
+    hostname: my_postgres_service
+    image: postgres:16.2-alpine
+    ports:
+      - "9999:5432"
+    environment:
+      - POSTGRES_PASSWORD=bdaPrimOrd
+      - POSTGRES_USER=primOrd
+      - POSTGRES_DB=PrimOrd
+
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+
+
+
+
+
 
 
 
@@ -111,6 +119,20 @@ services:
       - "27017:27017"
     volumes:
       - mongodb_data:/data/db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
