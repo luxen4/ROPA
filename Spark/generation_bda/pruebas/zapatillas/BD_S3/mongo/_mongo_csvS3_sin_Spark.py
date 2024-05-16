@@ -5,14 +5,10 @@ import csv
 #client = MongoClient()                  # Conexión al servidor de MongoDB (por defecto, se conectará a localhost en el puerto 27017)
 #client = MongoClient('mongodb://root:bda@localhost:27017')
 #client = MongoClient ('mongodb://root:bda@localhost:27017/')
-client = MongoClient('mongodb://root:bda@spark-mongodb-1:27017/proyecto')
+#client = MongoClient('mongodb://root:bda@spark-mongodb-1:27017/proyecto')
 
-
-
-db = client["proyecto"]
-clients_collection = db["zapatillas"]      # Accede a la colección "clients"
-
-
+#client = MongoClient('mongodb://root:secret@mongodb:27017/')
+client = MongoClient('mongodb://localhost:27017/')
 
 db = client["proyecto"]
 collection = db["zapatillas"]            # Accede a la colección "ropa"
@@ -27,7 +23,7 @@ resultados = collection.find()
 # Imprime los resultados
 data=[]
 print("encontrados:")
-print (resultados)
+#print (resultados)
 for producto in resultados:
     lista = producto['zapatillas']
     print(lista)

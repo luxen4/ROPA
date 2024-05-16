@@ -54,8 +54,9 @@ exit
 
 # mongosh --username root "mongodb://localhost:27017/proyecto"
 
+# mongosh --username root
 
-
+mongosh --username root --password secret --host spark-mongodb-1 --port 27017
 
 
 
@@ -68,7 +69,7 @@ pip3 install kafka-python==2.0.2
                                                                                                           
 # cd '.\Tema 4\'
 # cd .\Spark\
-# docker exec -it 6b10cb886acb3db1a2e16a6ef217580e415c31da9a25daece7d568d03ebc5d90 /bin/bash   # casa  
+# docker exec -it 3f46f1effed41670b48c98e9d8f09abca77ab587170c3a4b803e903103596786 /bin/bash   # casa  
 # docker exec -it 248356ae863cbb826b2e92d3f0ea62f25721141058ff7fba3f3dab55843981e1 /bin/bash   # clase
 # cd /opt/spark-apps     cd /opt/spark-data/sales
 # python prueba.py
@@ -268,7 +269,7 @@ pip install awscli-local
 
 
 
-
+https://www.jorgehernandezramirez.com/2017/03/26/primeros-pasos-en-mongodb-instalacion-en-docker-find-y-aggregation/    para consultas en mongo
 
 
 

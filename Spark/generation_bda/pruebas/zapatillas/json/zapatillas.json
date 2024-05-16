@@ -1,1 +1,214 @@
-null
+[
+  { "style": "LOW", "marca": "Air Jordan 1", "model": "OG", "years": "[1986]" },
+  {
+    "style": "LOW",
+    "marca": "Air Jordan 1",
+    "model": "Nu\u00c2\u00b4Retro",
+    "years": "[2002;2007-2008]"
+  },
+  {
+    "style": "LOW",
+    "marca": "Air Jordan 1",
+    "model": "[2004",
+    "years": "2007]"
+  },
+  {
+    "style": "LOW",
+    "marca": "Air Jordan 1",
+    "model": "Velcro",
+    "years": "[2008-2009]"
+  },
+  {
+    "style": "LOW",
+    "marca": "Air Jordan 1",
+    "model": "Phat",
+    "years": "[2008-2013]"
+  },
+  {
+    "style": "LOW",
+    "marca": "Air Jordan 1",
+    "model": "Alpha",
+    "years": "[2010]"
+  },
+  {
+    "style": "LOW",
+    "marca": "Air Jordan 1",
+    "model": "Alpha2",
+    "years": "[2012-present]"
+  },
+  {
+    "style": "LOW",
+    "marca": "Air Jordan 1",
+    "model": "Alpha2",
+    "years": "[2012-present]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Retro",
+    "years": "[2001]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Retro",
+    "years": "[2001]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Retro",
+    "years": "[2002]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Retro",
+    "years": "[2003]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Prat Mid",
+    "years": "[2003]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Alpha",
+    "years": "[2010]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Alpha Outdoor",
+    "years": "[2010]"
+  },
+  {
+    "style": "Mid",
+    "marca": "Air Jordan 1",
+    "model": "Alpha Outdoor",
+    "years": "[2010]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "Air Jordan 1",
+    "model": "Retro",
+    "years": "[1994]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "Air Jordan 1",
+    "model": "Retro",
+    "years": "[2001]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "Air Jordan 1",
+    "model": "Retro",
+    "years": "[2008-present]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "Air Jordan 1",
+    "model": "Retro Strap",
+    "years": "[1994]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "Air Jordan 1",
+    "model": "Anodized",
+    "years": "[2010]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "Air Jordan 1",
+    "model": "Retro OG",
+    "years": "[2013-present]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "NiKe S8 Air jordan 1",
+    "model": "Retro OG",
+    "years": "[2014]"
+  },
+  {
+    "style": "HIGHT",
+    "marca": "NiKe S8 Air jordan 1",
+    "model": "Retro OG",
+    "years": "[2014]"
+  },
+  { "style": "KO", "marca": "Air Jordan 1", "model": "OG", "years": "[1986]" },
+  {
+    "style": "KO",
+    "marca": "Air Jordan 1",
+    "model": "Retro Hight",
+    "years": "[2010]"
+  },
+  {
+    "style": "KO",
+    "marca": "Air Jordan 1",
+    "model": "Hight Premium",
+    "years": "[2010]"
+  },
+  {
+    "style": "KO",
+    "marca": "Air Jordan 1",
+    "model": "Retro Hight",
+    "years": "[2012]"
+  },
+  {
+    "style": "KO",
+    "marca": "Air Jordan 1",
+    "model": "Retro Hight OG",
+    "years": "[2014-present]"
+  },
+  {
+    "style": "KO",
+    "marca": "Air Jordan 1",
+    "model": "Retro Hight OG",
+    "years": "[2014-present]"
+  },
+  {
+    "style": "HYBRID",
+    "marca": "Air Jordan 1",
+    "model": "Prat 20",
+    "years": "[2010]"
+  },
+  {
+    "style": "HYBRID",
+    "marca": "Air Jordan 1",
+    "model": "Retro \u00c2\u00b489",
+    "years": "[2013]"
+  },
+  {
+    "style": "HYBRID",
+    "marca": "Air Jordan 1",
+    "model": "Retro \u00c2\u00b493",
+    "years": "[2013]"
+  },
+  {
+    "style": "HYBRID",
+    "marca": "Air Jordan 1",
+    "model": "Retro \u00c2\u00b495",
+    "years": "[2013]"
+  },
+  {
+    "style": "HYBRID",
+    "marca": "Air Jordan 1",
+    "model": "Retro \u00c2\u00b497",
+    "years": "[2013]"
+  },
+  {
+    "style": "HYBRID",
+    "marca": "Air Jordan 1",
+    "model": "Retro \u00c2\u00b499",
+    "years": "[2014]"
+  },
+  {
+    "style": "HYBRID",
+    "marca": "Air Jordan 1",
+    "model": "Retro \u00c2\u00b494",
+    "years": "[2014]"
+  }
+]

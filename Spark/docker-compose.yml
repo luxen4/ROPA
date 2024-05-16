@@ -99,11 +99,11 @@ services:
 
 # Esta tiene que funcionar
   mongodb:
-    image: mongo
+    image: mongo:4.4
     hostname: mongodb
     environment:
        MONGO_INITDB_ROOT_USERNAME: root
-       MONGO_INITDB_ROOT_PASSWORD: bda
+       MONGO_INITDB_ROOT_PASSWORD: secret
        MONGO_INITDB_DATABASE: proyecto
     
     restart: always
@@ -181,3 +181,5 @@ volumes:
   mongodb_data:
   neo4j_data:
   mysql_data:
+
+
