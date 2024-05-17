@@ -1,14 +1,10 @@
 # Que lea de mongo y que cree el csv en S3
 from pymongo import MongoClient
 import csv
+#client = MongoClient('mongodb://localhost:27017/') # esta la tiene Rafa
 
-#client = MongoClient()                  # Conexión al servidor de MongoDB (por defecto, se conectará a localhost en el puerto 27017)
-#client = MongoClient('mongodb://root:bda@localhost:27017')
-#client = MongoClient ('mongodb://root:bda@localhost:27017/')
-#client = MongoClient('mongodb://root:bda@spark-mongodb-1:27017/proyecto')
-
-#client = MongoClient('mongodb://root:secret@mongodb:27017/')
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('mongodb://root:secret@localhost:27017/')
+                     
 
 db = client["proyecto"]
 collection = db["zapatillas"]            # Accede a la colección "ropa"

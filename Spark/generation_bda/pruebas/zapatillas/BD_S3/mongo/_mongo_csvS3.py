@@ -25,7 +25,7 @@ spark = SparkSession.builder \
 #client = MongoClient(f'mongodb://spark-mongodb-1:27017/')
 #client = MongoClient('mongodb://mongodb:27017/')
 
-clients_collection = MongoClient(f'mongodb://root:secret@localhost:27017/')["proyecto"]["zapatillas"]
+clients_collection = MongoClient(f'mongodb://root:secret@spark-mongodb-1:27017/')["proyecto"]["zapatillas"]
                      
 
 
