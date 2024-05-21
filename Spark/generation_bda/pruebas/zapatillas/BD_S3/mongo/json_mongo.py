@@ -4,7 +4,7 @@ import json
 # Usando localhost si has mapeado el puerto 27017 del contenedor al host local
 #clients_collection = MongoClient('mongodb://root:secret@spark-mongodb-1:27017/')
 
-clients_collection = MongoClient()
+clients_collection = MongoClient('mongodb://bda:bdaPass@localhost:27017/')
 
 
 # Selecciona la base de datos y la colección

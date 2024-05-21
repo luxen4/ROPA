@@ -84,7 +84,7 @@ def read_text_file(filename):
 dropTable()
 createTable()
 
-filename = "./zapatillas2.txt"
+filename = "./../zapatillas.txt"
 read_text_file(filename)
 
 

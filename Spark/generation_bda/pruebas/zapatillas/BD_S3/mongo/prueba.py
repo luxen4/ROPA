@@ -1,23 +1,16 @@
-import pymongo
+from pymongo import MongoClient
 
 # Conexión a MongoDB
-client = pymongo.MongoClient('mongodb://root:secret@localhost:27017/')
+clients_collection = MongoClient('mongodb://localhost:27017/?authSource=proyecto')
 
-# Seleccionar la base de datos y la colección
-db = client["proyecto"]
+# Selecciona la base de datos y la colección
+db = clients_collection["proyecto"]
 zapatillas_collection = db["zapatillas"]
 
-documento = {
-    "style": "AAAAAAAAAAAAAAAAA",
-    "marca": "Nike",
-    "modelo": "Air Max",
-    "año": 2022,
-    "precio": 120
-}
-
-# Insertar el documento en la colección
+# Ahora puedes realizar operaciones en la colección zapatillas
+# Por ejemplo, insertar un documento
 try:
-    resultado = zapatillas_collection.insert_one(documento)
+    zapatillas_collection.insert_one({"style": "Casual", "marca": "Nike", "modelo": "Air Max", "año": 2022, "precio": 120})
     print("Documento insertado exitosamente.")
 except Exception as e:
     print(f"Error al insertar documento: {e}")

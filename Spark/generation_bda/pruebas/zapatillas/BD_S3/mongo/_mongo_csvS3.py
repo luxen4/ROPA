@@ -25,12 +25,12 @@ spark = SparkSession.builder \
 #client = MongoClient(f'mongodb://spark-mongodb-1:27017/')
 #client = MongoClient('mongodb://mongodb:27017/')
 
-clients_collection = MongoClient(f'mongodb://root:secret@spark-mongodb-1:27017/')["proyecto"]["zapatillas"]
+client = MongoClient(f'mongodb://spark-mongodb-1:27017/?authSource=proyecto')
                      
 
 
-#db = client["proyecto"]
-#clients_collection = db["zapatillas"]      # Accede a la colección "clients"
+db = client["proyecto"]
+clients_collection = db["zapatillas"]      # Accede a la colección "clients"
 
 
 # Realiza una consulta para encontrar todos los productos de tipo "pantalones"

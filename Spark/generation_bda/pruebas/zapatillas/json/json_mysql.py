@@ -1,9 +1,10 @@
 import mysql.connector
 import csv
 
-def dropTable():
+def dropTable_zapatillas():
     try:
-        conexion = mysql.connector.connect( host="localhost",user="root",password="alberite",database="tienda_db")
+        #conexion = mysql.connector.connect( host="localhost",user="root",password="alberite",database="tienda_db")
+        conexion = mysql.connector.connect( host="localhost",user="user1",password="alberite",database="retail_db")
         cursor = conexion.cursor()
 
         sql = """ DROP TABLE IF EXISTS zapatillas; """
@@ -19,9 +20,10 @@ def dropTable():
         #print(f"File '{filename}' not found.")
         print("No se ha podido eliminar la tabla.")
 
-def createTable():
+def createTable_zapatillas():
     try:
-        conexion = mysql.connector.connect( host="localhost",user="root",password="alberite",database="tienda_db")
+        #conexion = mysql.connector.connect( host="localhost",user="root",password="alberite",database="tienda_db")
+        conexion = mysql.connector.connect( host="localhost",user="user1",password="alberite",database="retail_db")
         cursor = conexion.cursor()
 
         sql = """Create table zapatillas(
@@ -49,7 +51,8 @@ def createTable():
 
 def insertTable(style, marca, model, years, precio):
     try:
-        conexion = mysql.connector.connect( host="localhost",user="root",password="alberite",database="tienda_db")
+        #conexion = mysql.connector.connect( host="localhost",user="root",password="alberite",database="tienda_db")
+        conexion = mysql.connector.connect( host="localhost",user="user1",password="alberite",database="retail_db")
         cursor = conexion.cursor()
 
         cursor.execute(""" INSERT INTO zapatillas (style, marca, model, years, precio) VALUES (%s, %s, %s, %s, %s) """, 
@@ -79,15 +82,20 @@ def read_json_file(filename):
     except FileNotFoundError:
         return None
     
+
+        
+dropTable_zapatillas()
+createTable_zapatillas()
+
 file_name='./zapatillas.json'
 data = read_json_file(file_name)
-    
+
 for registro in data:
-        style = registro['style']
-        marca = registro['marca']
-        model = registro['model']
-        years = registro['years']
-        precio = registro['precio']
-            
-        insertTable(style, marca, model, years, precio)
-        print(f"style: {style}, marca: {marca}, model: {model}, years: {years}, precio:{precio}")
+    style = registro['style']
+    marca = registro['marca']
+    model = registro['model']
+    years = registro['years']
+    precio = registro['precio']
+        
+    insertTable(style, marca, model, years, precio)
+    print(f"style: {style}, marca: {marca}, model: {model}, years: {years}, precio:{precio}")

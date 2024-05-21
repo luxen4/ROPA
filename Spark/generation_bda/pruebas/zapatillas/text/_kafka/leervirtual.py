@@ -26,11 +26,11 @@ def leerConSpark():
 
     try:
         #df = spark.read.text("s3a://my-local-bucket/dataPokemon.json")
-        #df = spark.read.option("header", "true").csv("s3a://my-local-bucket/zapatillasNeo4jConsumer99_csv")
-        #df.show()
-        
-        df = spark.read.json("s3a://my-local-bucket/json_zapatillasConsumer_json")        
+        df = spark.read.option("header", "true").csv("s3a://my-local-bucket/txt_zapatillasConsumer2_csv")
         df.show()
+        
+        #df = spark.read.json("s3a://my-local-bucket/txt_zapatillasConsumer_json")        
+        #df.show()
         
         spark.stop()
     

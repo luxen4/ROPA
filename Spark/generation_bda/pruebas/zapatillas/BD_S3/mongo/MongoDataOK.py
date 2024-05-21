@@ -22,12 +22,19 @@ class MongoDBOperations:
         result = self.collection.insert_one(data)
         return result
     
-empleados=read_json_file("Tema 4/PruebaExamen/data/Mongo/mongo.json")
+    
+    
+  
+file_name='./Spark/generation_bda/pruebas/zapatillas/BD_S3/mongo/zapatillas.json'
+empleados=read_json_file(file_name)
 
 
 mongo_operations = MongoDBOperations('BDAExamen','27017')
 
 for data in empleados:
+    print(empleados)
     mongo_operations.create_person("empleado",data)
+    
+    
 
 

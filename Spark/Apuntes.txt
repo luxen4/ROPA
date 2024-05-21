@@ -72,7 +72,7 @@ pip3 install kafka-python==2.0.2
 # cd '.\Tema 4\'
 # cd .\Spark\
 # docker exec -it spark-spark-master-1 /bin/bash   # casa  
-# docker exec -it 248356ae863cbb826b2e92d3f0ea62f25721141058ff7fba3f3dab55843981e1 /bin/bash   # clase
+# docker exec -it 5ba8af02407a76b02ae0af31e26d0e7e5f499118411ac4d30e362f556b20fa42 /bin/bash   # clase
 # cd /opt/spark-apps     cd /opt/spark-data/sales
 # python prueba.py
 

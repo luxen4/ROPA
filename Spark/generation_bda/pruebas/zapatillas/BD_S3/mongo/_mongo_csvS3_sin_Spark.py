@@ -3,11 +3,11 @@ from pymongo import MongoClient
 import csv
 #client = MongoClient('mongodb://localhost:27017/') # esta la tiene Rafa
 
-client = MongoClient('mongodb://root:secret@localhost:27017/')
+client = MongoClient('mongodb://localhost:27017/?authSource=proyecto')
                      
 
 db = client["proyecto"]
-collection = db["zapatillas"]            # Accede a la colección "ropa"
+collection = db["zapatillas1"]            # Accede a la colección "ropa"
 
 # Realiza una consulta para encontrar todos los productos de tipo "pantalones"
 #consulta = { "style": "HYBRID" }
