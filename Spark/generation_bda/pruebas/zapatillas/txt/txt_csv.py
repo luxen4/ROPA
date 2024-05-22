@@ -20,15 +20,8 @@ def create_csv_file(filename, data):
 
 zapatillas=[]
 def read_text_file(filename):
+    
     try:
-       result_df \
-    .write \
-    .partitionBy('my_column') \
-    .option('fs.s3a.committer.name', 'partitioned') \
-    .option('fs.s3a.committer.staging.conflict-mode', 'replace') \
-    .option("fs.s3a.fast.upload.buffer", "bytebuffer") \
-    .mode('overwrite') \
-    .csv(path='s3a://mybucket/output', sep=',')
         with open(filename, 'r') as file:
             
             for line in file:
@@ -56,3 +49,15 @@ data = read_text_file(file_name)
 
 file_name="./result/csv/zapatillas.csv"
 create_csv_file(file_name, data)
+
+
+'''
+result_df \
+.write \
+.partitionBy('my_column') \
+.option('fs.s3a.committer.name', 'partitioned') \
+.option('fs.s3a.committer.staging.conflict-mode', 'replace') \
+.option("fs.s3a.fast.upload.buffer", "bytebuffer") \
+.mode('overwrite') \
+.csv(path='s3a://mybucket/output', sep=',')
+'''

@@ -30,23 +30,15 @@ def read_text_file(filename):
         print(f"File '{filename}' not found.")
 
 
-
-
-
 if __name__ == "__main__":
     
     producer = KafkaProducer(bootstrap_servers=['localhost:9092'], value_serializer=lambda x: dumps(x).encode('utf-8'))
     # producer = KafkaProducer(bootstrap_servers= ['kafka:9093'], value_serializer=lambda x: dumps(x).encode('utf-8'))
-    file_name="./../zapatillas.txt"
     
+    file_name="Spark/data_bda/txt/zapatillas.txt"
     resultados = read_text_file(file_name)
     
-    print(resultados)
-    
-    data=[]
-    
     for item in resultados:
-        print(item)  # Aquí puedes hacer algo con cada fila
         style=item['style']
         marca=item['marca']
         model=item['model']
@@ -57,6 +49,6 @@ if __name__ == "__main__":
         print(message)
         producer.send('zapatillas_stream', value=message)
         
-        #sleep(2)
+        sleep()
         
 # que lea de txt y que haga el producer
